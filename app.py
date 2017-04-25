@@ -7,6 +7,7 @@ from flask import request
 from flask import make_response
 from flask import redirect
 from flask import abort
+from flask import render_template
 
 # Flask uses the __name__ argument to determine the root path of the application so that
 # it later can find resource files relative to the location of the application.
@@ -14,11 +15,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Hello World!</h1>'
+    #return '<h1>Hello World!</h1>'
+    return render_template('index.html')
 
 @app.route('/user/<name>')
 def user(name):
-    return '<h1>Hello, %s!</h1>' % name
+    #return '<h1>Hello, %s!</h1>' % name
+    return render_template('user.html', name=name)
 
 @app.route('/browser')
 def get_browser():
