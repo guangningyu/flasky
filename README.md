@@ -1,4 +1,5 @@
 #Set up environment
+
 ```
 pip install virtualenv
 cd flasky
@@ -8,6 +9,7 @@ pip install -r requirements.txt
 ```
 
 #How to run
+
 ```
 source venv/bin/activate
 ./app.py
